@@ -43,6 +43,7 @@ while (<>) {
     $clipping = &Getline0();
     $clipping =~ s/"/\\"/g;
     $title =~ s/"/\\"/g;
+    $title =~ s/[[:space:]]+$//;
 
     if ($type) {
         print "-";
